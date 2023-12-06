@@ -1,0 +1,82 @@
+For an array with n elements:-
+
+Subaarays are continuous subsequences.
+No. of subarrays= nC2+n=n(n+1)/2
+No. of subsequences= 2^n
+Every subarray is a subsequence but every subsequence is not a subarray.
+
+1 sec= 10^8 operations(approx.)
+
+To convert string to interger we use stoi() function.
+E.g.- string st3="678";
+      int x= stoi(st3);
+      cout<< x+4 << endl;
+
+      OUTPUT- 682
+
+To sort a string:
+Ascending order-
+E.g.-string st="qwertyuioplkjhgfdsazxcvbnm";
+     sort(st.begin(),st.end());
+     cout<<st<<endl;
+
+     OUTPUT- abcdefghijklmnopqrstuvwxyz
+Descending order-
+E.g.-string st="73459373";
+     sort(st.begin(),st.end(), greater<int>() );
+     cout<< st <<endl;
+
+     OUTPUT- 97754333
+
+*************************************************
+Template for competitive programming :
+
+#include <iostream>
+#define ll long long int
+using namespace std;
+
+int main()
+{
+    cin.sync_with_stdio(false);
+    cin.tie(NULL);
+
+    ll t;
+    cin >> t; 
+    while(t--){
+
+    }
+    return 0;
+}
+*************************************************
+
+Directly convert binary to integer:
+int main()
+{
+   int n = 0b1000; // write 0b and following if write the binary no.
+   cout<<n;
+
+   return 0;  
+} 
+OUTPUT- 8
+
+GCD using Euclid Algorithm:
+Approach- gcd(a,b) = gcd(b,a%b)
+Code- 
+int gcd( int a, int b)
+{
+    int rem;
+    while(b != 0) {
+        rem = a % b;
+        a = b;
+        b = rem;    
+    }
+    return a;
+}
+
+# Trees
+- We cannot generate a tree from post and pre order only
+- It is only possible to do so if the tree is a complete or full binary tree
+- Height of tree: Depth of the tree's deepest node
+- Diameter of tree: No. of nodes in the longest path between any 2 leaf nodes
+- Balanced Height Binary Tree: For each node, the difference btw the heights of the left subtree 
+and right subtree is <= 1
